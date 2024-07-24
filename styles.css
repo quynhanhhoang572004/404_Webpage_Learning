@@ -144,9 +144,150 @@ img {
 
 
 /*=============== HOME ===============*/
+.home__container{
+    padding-top: 7.5rem;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: max-content 320px;
+    row-gap: 2rem;
+    
+
+}
+.home__data{
+    text-align: center;
+
+}
+.home__subtitle{
+    font-size: var(--normal-font-size);
+    margin-bottom: .5rem;
+
+}
+.home__title{
+    font-size: var(--biggest-font-size);
+    -webkit-text-stroke: 5px var(--black-color);
+    color: var(--white-color);
+    paint-order: stroke;
+    filter: drop-shadow(-4px 4px 0 var(--black-color));
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+
+    
+}
+
+.home__description{
+    padding-inline: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.home__button{
+    display: inline-flex;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-weight: var(--font-bold);
+    padding: 1rem 1.5rem ;
+    transition: box-shadow .4s;
+}
+.home__button{
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, .2);
+}
+.home__images{
+    position: relative;
+}
+/* select the elements with the class 'home_images' and whose class attributes also 
+contains the substring "home_blob" */
+.home__images [class*=home__blob]{
+    background-color: var(--black-color);
+    position: absolute;
+}
+
+.home__images [class*=home__img]{
+    position: absolute;
+}
+
+
+.home__blob-1{
+    width: 150px;
+    height: 180px;
+    border-radius: 38% 62% 66% 34%/60% 41% 59% 40%;
+    top:-2rem;
+    left: -4rem;
+    animation: blob-1 4s linear infinite;
+    
+}
+.home__img-1{
+    width: 100px;
+    top: .75rem;
+    right: 1rem;
+
+}
+.home__blob-2{
+    width: 200px;
+    height: 195px;
+    border-radius: 59% 41% 19% 81%/34% 72% 28% 66%;
+    top: -8rem;
+    right: -8.5rem;
+    animation: blob-2 4s linear infinite;
+    
+}
+.home__img-2{
+    width:120px;
+    bottom: 5rem;
+    left: 0;
+
+}
+.home__blob-3{
+    width: 200px;
+    height: 190px;
+    border-radius: 57% 43% 40% 60%/49% 34% 66% 51%;
+    left: -5rem;
+    bottom: -4.5rem;
+    animation: blob-3 4s linear infinite;
+
+}
+.home__img-3{
+    width:100px;
+    top: 1rem;
+    right: 2rem;
+}
+.home__blob-4{
+    width: 300px;
+    height: 290px;
+    border-radius:78% 22% 20% 80%/53% 46% 54% 47%;
+    right: -9rem;
+    bottom: -4rem;
+    animation: blob-4 4s linear infinite;
+}
+.home__img-4{
+    width: 200px;
+}
+
+.home__img-5{
+    width: 150px;
+    left:0;
+    right: -4rem;
+    margin: 0 auto;
+    top: 1rem;
+    rotate:15deg;
+    z-index: -1;
+}
+
+
+
+
 
 
 /* Animate blobs */
+@keyframes blob-1{
+    0%,100%{
+        border-radius: 38% 62% 66% 34%/60% 41% 59% 40%;
+    }
+    33%{
+        border-radius: 59% 41% 55% 45%/64% 22% 78% 36%;
+    }
+    66%{
+        border-radius: 59% 41% 35% 65%/46% 67% 33% 54%;
+    }
+}
 
 
 /*=============== BREAKPOINTS ===============*/
